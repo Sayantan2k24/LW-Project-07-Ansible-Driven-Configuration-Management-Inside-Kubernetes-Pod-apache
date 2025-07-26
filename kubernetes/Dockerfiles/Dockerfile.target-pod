@@ -9,8 +9,7 @@ RUN apt-get update && \
     sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     systemctl enable apache2
 
-# Copy initial HTML content
-COPY index.html /var/www/html/
+RUN echo "This is index.html file" >  /var/www/html/index.html
 
 # Expose ports for Apache and SSH
 EXPOSE 80 22
