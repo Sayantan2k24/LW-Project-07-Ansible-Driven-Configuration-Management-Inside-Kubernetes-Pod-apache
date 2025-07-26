@@ -1,6 +1,6 @@
 ---
 - name: Setup Flask environment and run app
-  hosts: flaskpods
+  hosts: apache
   tasks:
   - name: Update Apache HTML page
     ansible.builtin.copy:
